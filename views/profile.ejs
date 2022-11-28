@@ -1,0 +1,53 @@
+<%- include('partials/header') -%>
+<div class="order1" >
+  <p><strong>User Name</strong>: <%= user.userName %></p>
+  <p><strong>Email</strong>: <%= user.email %></p>
+  <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+</div>
+<section class="profile">
+
+
+  <div>
+
+    <h2>Orders waiting to be completed</h2>
+            <% for (let i = 0; i < notCompleted.length; i++) {%>
+              <div class="order">
+                <h2>Uncompleted Order</h2>
+
+                  <span id="">Order: <%= notCompleted[i].coffeeSelected%></span> <br>
+                  <span id="">Size: <%= notCompleted[i].size%></span> <br>
+                  <span id="">Customer Name: <%= notCompleted[i].customerName%></span> <br>
+                    <form
+                    class="col-3"
+                    action="/post/completed/<%= notCompleted[i].id %>?_method=PUT"
+                    method="POST"
+                    >
+                    <button class="btn btn-primary bi bi-check-circle" type="submit">Complete this order</button>
+                  </form>
+              </div>
+            <%}%>
+  </div>
+  <div>
+
+    <h2>Completed Orders</h2>
+        <% for (let i = 0; i < Completed.length; i++) {%>
+          <div class="order">
+              <h2>This order was completed by <%= Completed[i].employee%></h2>
+              <span id="">Order: <%= Completed[i].coffeeSelected%></span>
+                  <span id="">Size: <%= Completed[i].size%></span>
+                  <span id="">Status: <%= Completed[i].isCompleted%></span>
+                  <span id="">Customer Name: <%= Completed[i].customerName%></span>
+              <form
+              action="/post/delete/<%= Completed[i].id %>?_method=DELETE" 
+              method="POST"
+              class="col-3"
+            >
+              <button class="btn btn-primary bi bi-trash" type="submit">Delete Order</button>
+            </form>
+          </div>
+        <%}%> 
+  </div>
+</section>
+
+
+<%- include('partials/footer') -%>

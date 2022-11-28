@@ -1,0 +1,123 @@
+.text-center {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    text-decoration: none;
+    color: black;
+}
+
+#signIn {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.orders {
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+    height: 150px;
+    float: left;
+    background-color: #85625E;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #DEC5AE ;
+    color: black;
+}
+
+section{
+    width: 100%;
+    float: left;
+    align-items: center;
+    margin-top: 30px;
+}
+
+label {
+    margin-left: 20%;
+    font-weight: 800;
+}
+
+select {
+    background-color: #DEC5AE;
+}
+
+input {
+    border: 1px solid black;
+    width: 70%;
+    float: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20%;
+    width: 40%;
+}
+
+#btn {
+    height: 28px;
+    margin-left: 5px;
+    align-items: center;
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+.thankyou {
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+    height: 200px;
+    float: left;
+    background-color: #805a49;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#btn2 {
+    margin-left: 38%;
+}
+
+body {
+    background-image: url(../imgs/cafe.png);
+    background-size: cover;
+}
+
+
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile div{
+    background-color: green;
+    margin: 20px;
+    text-align: center;
+}
+
+.order { 
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.order button{
+    width: 200px;
+}
+
+
+.order1 { 
+    border: 1px solid black;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+    text-align: center;
+
+}    
+
